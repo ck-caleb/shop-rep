@@ -6,15 +6,18 @@
   text-decoration: none;
   list-style: none;
 }
+:root {
+  --popular-color: #325757;
+  --fav-color: #141f1f;
+  --attractive-color: #159234;
+  --shouting-color: #159234;
+}
 main {
-  /* background:linear-gradient(to right, #E08976 #FFBA6A); */
   min-height: 100vh;
-  background: #00C9C8;
+  background: #00c9c8;
+}
 
-}
-.home {
-  /* background: whitesmoke; */
-}
+/* NAVIGATION SECTION */
 .nav-bar {
   background: rgb(241, 241, 247);
   outline: 0.5px solid black;
@@ -25,7 +28,6 @@ main {
   border-bottom: 1px solid blue;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  /* position: fixed; */
 }
 .nav-bar .links ul li {
   display: inline-block;
@@ -35,7 +37,6 @@ main {
 .nav-bar .links ul li a {
   color: black;
 }
-
 .nav-logo {
   padding: 1rem;
   font-weight: 900;
@@ -48,16 +49,16 @@ main {
   border-radius: 50px;
   cursor: pointer;
 }
+
+/* HOME SECTION */
 .home-row {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
-  /* background: rgb(197, 197, 209); */
 }
 .home-col {
   flex: 1;
-  outline: 1px solid black;
 }
 .hero1 {
   text-align: center;
@@ -99,21 +100,74 @@ main {
   display: inline-block;
 }
 
-.arrivals1 {
+/* ARRIVAL SECTION */
+.arrivalsTopContent {
+  text-align: center;
+  font-size: larger;
+  padding: 2.5rem;
+  margin: 1rem, 0;
+}
+.arrivals-pictures {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  gap: 1.5rem;
+  /* margin: 2rem, 0; */
+  outline: 1px solid black;
+  
+}
+
+.arrivals-pictures img {
+  max-width: 300px;
+}
+.arrivals-picture-box {
+  border-radius: 30px;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow: 28px 28px 55px #969696, -8px -8px 40px #ffffff;
+}
+.arrivals-picture-box:hover {
+  transform: scale(1.05);
+}
+.arrival-img-box {
+  display: grid;
+  place-content: center;
+  margin: 0.5rem;
+}
+.arrivals-clothes-description {
+  padding: 0.7rem;
+}
+.arrivals-clothes-type {
+  color: black;
+  font-size: 24px;
   text-align: center;
 }
-.arrivals {
-  /* display: grid; */
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  display: inline-block;
+.arrivals-clothes-sizes {
+  display: flex;
 }
-.arrivals img {
-  max-width: 300px;
-  display: inline-block;
+.arrivals-clothes-sizes span {
+  margin: 0.5rem;
+  padding: 0 0.4rem;
 }
+.arrivals-clothes-sizes p {
+  background: white;
+  margin: 0.5rem;
+  padding: 0 0.4rem;
+  border-radius: 5px;
+}
+.arrival-colors-btn {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.5rem;
+}
+.arrivals-price-cart {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (width: 500px) {
-  
 }
 .arrivals1 p {
   font-size: 30px;
@@ -124,29 +178,28 @@ main {
   margin: 2rem 4rem;
   padding: 3rem 10%;
 }
-.featured-styles-tittle{
+
+/* FEATURED STYLES SECTION */
+.featured-styles-tittle {
   font-size: 30px;
   font-style: italic;
-  color:rgb(26, 23, 23) ;
+  color: rgb(26, 23, 23);
   margin-bottom: 1rem;
 }
-.featured-styles img{
+.featured-styles img {
   width: 250px;
   transition: 0.4s;
-  /* aspect-ratio: 1/2; */
 }
-.featured-styles img:hover{
-
+.featured-styles img:hover {
   transform: scale(1.1);
-
 }
-.featured-styles h4{
+.featured-styles h4 {
   font-size: 25px;
   margin: 3rem 0;
   text-align: center;
-
 }
 
+/* CUSTOMER REVIEW SECTION */
 .customer-review {
   color: aqua;
 }
@@ -173,14 +226,17 @@ main {
 .grid-column-span2 {
   grid-column: span 2;
 }
-.size-chart-title{
+
+/* SIZE CHART SECTION */
+.size-chart-title {
   text-align: center;
   margin: 2rem 4rem;
   font-size: 30px;
   color: rgb(61, 81, 97);
   font-style: italic;
-
 }
+
+/* ABOUT US SECTION */
 .about-us p {
   text-align: center;
   margin: 2rem 4rem;
@@ -188,17 +244,15 @@ main {
   color: rgb(61, 81, 97);
   font-style: italic;
   padding: 3rem 10%;
-
-
-
 }
+
+/* CONTACT US SECTION */
 .contact-us {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
   border: 1px solid black;
   margin-bottom: 1rem;
-
 }
 .contact-us-tittle {
   align-items: center;
@@ -208,7 +262,7 @@ main {
   align-items: center;
   font-size: 30px;
   font-style: italic;
-  padding:  .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 .contact-us-body {
   flex: 1;
@@ -224,18 +278,14 @@ main {
   width: 90%;
   margin: 1rem 0;
   /* text-align: center; */
-
 }
 .contact-us-body form input {
   width: 90%;
   margin-bottom: 1rem;
   background: #eee;
   padding: 1rem;
-  
-
 }
-.contact-us-body-button{
-  
+.contact-us-body-button {
   text-align: center;
   margin-left: 12rem;
   margin-bottom: 2rem;
@@ -243,5 +293,3 @@ main {
   border-radius: 50px;
   background: rgb(180, 136, 53);
 }
-
-
