@@ -19,6 +19,9 @@ main {
 
 /* NAVIGATION SECTION */
 .nav-bar {
+  position: sticky;
+  top: 0;
+  left: 0;
   background: rgb(241, 241, 247);
   outline: 0.5px solid black;
   display: flex;
@@ -45,7 +48,7 @@ main {
 .nav-button {
   padding: 1rem;
   border: none;
-  background: rgb(146, 117, 64);
+  background: #ff8c00;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -82,7 +85,7 @@ main {
   margin-bottom: 1rem;
 }
 .hero1 button {
-  background: rgb(146, 117, 64);
+  background: #ff8c00;
   width: 130px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -109,23 +112,22 @@ main {
 }
 .arrivals-pictures {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
   /* margin: 2rem, 0; */
-  outline: 1px solid black;
-  
 }
 
 .arrivals-pictures img {
-  max-width: 300px;
+  /* max-width: 300px; */
+  max-width: 270px;
 }
 .arrivals-picture-box {
   border-radius: 30px;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
-  box-shadow: 28px 28px 55px #969696, -8px -8px 40px #ffffff;
+  box-shadow: 28px 28px 55px #969696, 3px 3px 5px #ffffff;
 }
 .arrivals-picture-box:hover {
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 .arrival-img-box {
   display: grid;
@@ -168,6 +170,7 @@ main {
 }
 
 @media (width: 500px) {
+  
 }
 .arrivals1 p {
   font-size: 30px;
@@ -184,20 +187,95 @@ main {
   font-size: 30px;
   font-style: italic;
   color: rgb(26, 23, 23);
-  margin-bottom: 1rem;
+  margin: 3rem;
 }
-.featured-styles img {
+.featured-styles-men {
+  display: flex;
+  gap: 0.5rem;
+}
+.featured-styles-men-container1 {
+  flex: 1;
+}
+.featured-styles-men-container2 {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.featured-styles-men-container1 img {
+  width: 100%;
+  height: 100%px;
+}
+.featured-styles-men-container2 img {
   width: 250px;
+  height: 350px;
   transition: 0.4s;
 }
 .featured-styles img:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
 }
 .featured-styles h4 {
   font-size: 25px;
   margin: 3rem 0;
   text-align: center;
 }
+.featured-style-container-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.featured-styles-women-containers {
+  display: flex;
+  gap: 0.5rem;
+}
+.featured-styles-women-container1 {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.featured-styles-women-container2 {
+  flex: 1;
+}
+.featured-styles-women-container1 img {
+  width: 250px;
+  height: 380px;
+}
+.featured-styles-women-container2 img {
+  height: 100%;
+  width: 100%;
+}
+.featured-styles-children-grid {
+  display: flex;
+  gap: 0.5rem;
+}
+.featured-styles-children-grid-container1 {
+  flex: 1;
+}
+.featured-styles-children-grid-container1 img {
+  width: 100%;
+  height: 100%;
+}
+
+.featured-styles-children-grid-container2 {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.featured-styles-children-grid-container2 img {
+  width: 250px;
+  height: 380px;
+}
+
+/* DETAILS AND FEATURES */
+
 
 /* CUSTOMER REVIEW SECTION */
 .customer-review {
@@ -215,16 +293,41 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  align-items: center;
+  align-items: start;
 }
-.customer-review-body div:nth-child(odd) {
-  background: black;
+.customer-review-body .customer-review-body-container:nth-child(odd) {
+  background: #ffffff;
+  color: #333333;
+  border-radius: 20px;
+  padding: .5rem;
+  /* max-height: 8rem; */
 }
-.customer-review-body div:nth-child(even) {
-  background: rgb(58, 38, 14);
+.customer-review-body .customer-review-body-container:nth-child(even) {
+  background: #333333;
+  color: #ffffff;
+  padding: .5rem;
+  border-radius: 20px;
+
 }
-.grid-column-span2 {
-  grid-column: span 2;
+.customer-review-body img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+#customer-review-text{
+  /* color: red; */
+  max-height: 2.5rem;
+  overflow: hidden;
+}
+#customer-review-text.open{
+  /* max-height:fit-content; */
+  max-height:1000px;
+}
+#customer-review-button{
+  background: red;
+  border-radius: 7px;
+  padding: .3rem;
+  margin-top: 1rem;
 }
 
 /* SIZE CHART SECTION */
@@ -264,6 +367,10 @@ main {
   font-style: italic;
   padding: 0.5rem 1rem;
 }
+.contact-us-tittle span{
+  color: #fff;
+  font-size: 54px;
+}
 .contact-us-body {
   flex: 1;
 }
@@ -284,6 +391,9 @@ main {
   margin-bottom: 1rem;
   background: #eee;
   padding: 1rem;
+  border: none;
+  border-radius:50px ;
+
 }
 .contact-us-body-button {
   text-align: center;
@@ -293,3 +403,4 @@ main {
   border-radius: 50px;
   background: rgb(180, 136, 53);
 }
+
